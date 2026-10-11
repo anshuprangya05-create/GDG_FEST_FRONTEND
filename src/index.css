@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+  
+  body {
+    background-color: #F5EFE2;
+    color: #17140D;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bricolage Grotesk', sans-serif;
+    letter-spacing: -0.035em;
+    font-weight: 800;
+  }
+
+  code, kbd, samp, pre, .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  /* Accessibility focus styling - bold Memphis ring */
+  :focus-visible {
+    outline: 3px solid #17140D;
+    outline-offset: 3px;
+  }
+}
+
+/* Tabular figures for timers, timecodes, and metrics */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Memphis Hard Shadows & Outlines */
+.border-memphis {
+  border: 3px solid #17140D;
+}
+
+.shadow-memphis-lg {
+  box-shadow: 8px 8px 0px #17140D;
+}
+
+.shadow-memphis-md {
+  box-shadow: 5px 5px 0px #17140D;
+}
+
+.shadow-memphis-sm {
+  box-shadow: 3px 3px 0px #17140D;
+}
+
+/* Interactive Memphis Button Press Effect */
+.btn-memphis-primary {
+  border: 3px solid #17140D;
+  background-color: #FF5B57;
+  color: #17140D;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  box-shadow: 5px 5px 0px #17140D;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+.btn-memphis-primary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px #17140D;
+  background-color: #FFC531;
+}
+.btn-memphis-primary:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #17140D;
+}
+
+.btn-memphis-secondary {
+  border: 3px solid #17140D;
+  background-color: #FFFFFF;
+  color: #17140D;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  box-shadow: 5px 5px 0px #17140D;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+.btn-memphis-secondary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px #17140D;
+  background-color: #12B3A4;
+  color: #FFFFFF;
+}
+.btn-memphis-secondary:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0px #17140D;
+}
+
+/* Memphis Card Base */
+.card-memphis {
+  border: 3px solid #17140D;
+  background-color: #FFFFFF;
+  box-shadow: 8px 8px 0px #17140D;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Memphis Marker Highlights */
+.marker-yellow {
+  background-color: #FFC531;
+  color: #17140D;
+  padding: 0 0.35rem;
+  display: inline-block;
+  border: 2px solid #17140D;
+  transform: rotate(-1deg);
+  box-shadow: 2px 2px 0px #17140D;
+}
+
+.marker-teal {
+  background-color: #12B3A4;
+  color: #FFFFFF;
+  padding: 0 0.35rem;
+  display: inline-block;
+  border: 2px solid #17140D;
+  transform: rotate(1deg);
+  box-shadow: 2px 2px 0px #17140D;
+}
+
+.marker-coral {
+  background-color: #FF5B57;
+  color: #FFFFFF;
+  padding: 0 0.35rem;
+  display: inline-block;
+  border: 2px solid #17140D;
+  transform: rotate(-0.5deg);
+  box-shadow: 2px 2px 0px #17140D;
+}
+
+/* Geometric Dot Pattern (Solid, no blur) */
+.memphis-dots {
+  background-image: radial-gradient(#17140D 1.75px, transparent 1.75px);
+  background-size: 16px 16px;
+}
+
+/* Diagonal Stripes Pattern */
+.memphis-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    #FFC531,
+    #FFC531 10px,
+    #17140D 10px,
+    #17140D 14px
+  );
+}
+
+/* Custom crisp scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F5EFE2;
+  border-left: 2px solid #17140D;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFC531;
+  border: 2px solid #17140D;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5B57;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
